@@ -1,0 +1,63 @@
+.menu {
+  background-color: $c-header-bg;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+
+  &:target {
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    .menu:target & {
+      display: flex;
+    }
+
+    &--main-text {
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+
+      @include hover(transform, scale(1.2));
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 4px;
+        background-color: $c-blue;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 12%;
+      }
+    }
+  }
+}
+
+body:has(.menu:target) {
+  overflow: hidden;
+}
+
+body:has(.menu:target) .slider {
+  visibility: hidden;
+}

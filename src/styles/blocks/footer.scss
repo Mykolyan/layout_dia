@@ -26,7 +26,7 @@
 
     @include on-wide {
       flex-direction: row;
-      gap: 19.5%;
+      gap: 30%;
     }
   }
 
@@ -88,6 +88,10 @@
 
     &__map {
       position: relative;
+
+      @include on-wide {
+        white-space: nowrap;
+      }
 
       &::after {
         content: '';

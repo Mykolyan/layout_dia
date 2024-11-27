@@ -9,6 +9,10 @@
     width: 50%;
     right: 0;
   }
+
+  &__wrap {
+    width: 266px;
+  }
 }
 
 .slide-desktop {
@@ -17,6 +21,16 @@
   object-fit: cover;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
+  display: block;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide-desktop.active {
+  z-index: 1;
+  opacity: 1;
 }
 
 .button-container-desktop {
@@ -91,7 +105,7 @@
   z-index: 2;
 
   @include on-wide {
-    left: 36.6%;
+    left: 37.7%;
   }
 
   @include on-big {

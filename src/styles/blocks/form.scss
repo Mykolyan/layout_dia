@@ -9,7 +9,7 @@
   &__field {
     position: relative;
     background-color: $c-header-bg;
-    border-bottom: solid 2px $c-white;
+    border-bottom: solid 2.5px $c-white;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -27,7 +27,7 @@
     }
 
     &:hover {
-      border-bottom: solid 2px $c-blue;
+      border-bottom: solid 2.5px $c-blue;
     }
 
     &:focus {
@@ -39,8 +39,38 @@
       height: 48px;
       padding-top: 10px;
       text-wrap: wrap;
-      resize: none;
-      overflow: hidden;
+      resize: vertical;
+      overflow-y: scroll;
+      scrollbar-width: none;
+    }
+
+    &:-webkit-autofill {
+      background-color: $c-header-bg !important;
+      color: $c-white !important;
+      -webkit-text-fill-color: $c-white !important;
+      font-family: Poppins, sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      box-shadow: 0 0 0 1000px $c-header-bg inset !important;
+      border-bottom: solid 2.5px $c-white !important;
+      transition:
+        background-color 0s,
+        color 0s,
+        box-shadow 0s;
+    }
+
+    &:-moz-autofill,
+    &:-ms-autofill {
+      background-color: $c-header-bg !important;
+      color: $c-white !important;
+      font-family: Poppins, sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+    }
+
+    &:not(:-webkit-autofill) {
+      color: $c-white !important;
+      -webkit-text-fill-color: $c-white !important;
     }
   }
 

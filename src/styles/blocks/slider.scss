@@ -35,10 +35,18 @@
   object-fit: cover;
   width: 100vw;
   height: 390px;
-  z-index: 1;
   border-radius: 30px;
   bottom: 0.1px;
   left: 0.1px;
+  display: block;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  z-index: 1;
+  opacity: 1;
 }
 
 .slider {

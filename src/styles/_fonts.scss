@@ -154,7 +154,7 @@ header {
     line-height: 19.5px;
     letter-spacing: 3px;
     color: $c-lightgray;
-    text-align: center;
+    text-align: left;
   }
 
   h2 {
@@ -178,6 +178,10 @@ header {
   &__bottom {
     p {
       color: $c-darkblue;
+    }
+
+    h4 {
+      text-align: center;
     }
   }
 }

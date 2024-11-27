@@ -18,6 +18,7 @@
     align-items: center;
     gap: 24px;
     padding-top: 48px;
+    justify-content: center;
 
     @include on-tablet {
       gap: 30px;

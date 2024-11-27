@@ -6,6 +6,7 @@
 
     @include on-tablet {
       gap: 56px;
+      justify-content: center;
     }
   }
 
@@ -37,7 +38,8 @@
 
     @include on-tablet {
       flex-flow: row wrap;
-      width: 558px;
+      width: 100%;
+      justify-content: center;
     }
 
     @include on-desktop {
